@@ -1,0 +1,17 @@
+DEST -> LON (28/07/2010 1800 -> 03/08/2010 1400)
+
+50km <-1h-1h-> LON
+
+1km = 1€
++ 150€ < 1800
+250€ > 1800
+
+BER
+CDG
+MRS
+LYS
+MAN
+BIO
+JFK
+TUN
+MXP
