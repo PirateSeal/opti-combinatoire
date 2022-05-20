@@ -9,6 +9,7 @@ pub struct Flight {
     pub departure_time: DateTime<Utc>,
     pub arrival_time: DateTime<Utc>,
     pub price: u32,
+    pub airline: String
 }
 
 impl Flight {
@@ -17,13 +18,16 @@ impl Flight {
         destination: Airport,
         departure_time: DateTime<Utc>,
         arrival_time: DateTime<Utc>,
-        price: u32) -> Flight {
+        price: u32,
+        airline: String
+    ) -> Flight {
         Flight {
             origin,
             destination,
             departure_time,
             arrival_time,
-            price
+            price,
+            airline
         }
     }
 

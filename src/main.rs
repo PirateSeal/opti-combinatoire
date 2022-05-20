@@ -7,3 +7,7 @@ use model::{airport, flight};
 fn main() {
     println!("Hello, world!");
 }
+
+fn load_flights() {
+
+}
