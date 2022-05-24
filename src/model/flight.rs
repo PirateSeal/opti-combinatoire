@@ -1,25 +1,29 @@
-use chrono::{DateTime, Duration, TimeZone, Utc};
+use chrono::{DateTime, Duration, Utc};
+use serde::Deserialize;
 
 use crate::model::airport::Airport;
 
 //struct flight with flight number, departure time, arrival time, price and duration
+#[derive(Deserialize, Debug)]
 pub struct Flight {
-    pub origin: Airport,
-    pub destination: Airport,
-    pub departure_time: DateTime<Utc>,
-    pub arrival_time: DateTime<Utc>,
+    pub origin: String,
+    pub destination: String,
+    pub departure_time: String,
+    pub arrival_time: String,
     pub price: u32,
-    pub airline: String
+    pub airline: String,
+    pub stops: u32
 }
 
 impl Flight {
     pub fn new(
-        origin: Airport,
-        destination: Airport,
-        departure_time: DateTime<Utc>,
-        arrival_time: DateTime<Utc>,
+        origin: String,
+        destination: String,
+        departure_time: String,
+        arrival_time: String,
         price: u32,
-        airline: String
+        airline: String,
+        stops: u32
     ) -> Flight {
         Flight {
             origin,
@@ -27,11 +31,8 @@ impl Flight {
             departure_time,
             arrival_time,
             price,
-            airline
+            airline,
+            stops
         }
-    }
-
-    pub fn get_length(&self) -> Duration {
-       return self.arrival_time - self.departure_time
     }
 }
