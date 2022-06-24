@@ -4,7 +4,7 @@ use serde::Deserialize;
 use crate::model::airport::Airport;
 
 //struct flight with flight number, departure time, arrival time, price and duration
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, Eq, PartialEq, Clone)]
 pub struct Flight {
     pub origin: String,
     pub destination: String,

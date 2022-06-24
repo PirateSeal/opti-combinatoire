@@ -3,7 +3,7 @@ use serde::Deserialize;
 use crate::model::flight::Flight;
 
 //struct airport with name, location, and code
-#[derive(Deserialize, Debug, Eq, PartialEq)]
+#[derive(Deserialize, Debug, Eq, PartialEq, Clone)]
 pub struct Airport {
     pub name: String,
     pub country_code: String,
